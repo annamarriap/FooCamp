@@ -1,0 +1,43 @@
+Instrucciones de ejercicio:
+
+Crear desde cero un nuevo artículo para nuestra
+página de blogs de pokémon.
+
+Para ello se recomienda basarsa en el artículo de
+Pikachu y utilizar los assets de `Bulbasaur` que 
+se encuentran en la carpeta `assets/Blogs/Bulbasaur`.
+
+La página resultante debe tener la siguiente 
+estructura:
+
+body
+    header
+    main content
+        article
+            title
+            time
+            section
+                paragraph
+                video
+                sub section 1
+                    title
+                    paragraph
+                    figure
+                        image
+                        figcaption
+                    paragraph
+                sub section 2
+                    title
+                    unorder list (ul)
+                        list item 1
+                        list item 2
+                        list item 3
+                        list item 4
+                        list item 5
+    footer
+        link
+
+
+            
+
+

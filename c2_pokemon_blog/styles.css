@@ -1,0 +1,135 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  /* background-color: rgb(240, 236, 236); */
+}
+
+body {
+    max-width: 36rem;
+    padding: 0 1rem;
+    margin: 3rem auto 6rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+    font-weight: 800;
+    letter-spacing: -.05rem;
+    margin: 1rem 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+video {
+    display: block;
+    margin: auto
+}
+
+figure {
+    margin: 1em 0 0 0;
+    width: auto;
+    height: 100%;
+    /* aspect-ratio: auto 200 / 150; */
+
+}
+
+figure img {
+    border-radius: 4px;
+
+}
+
+figure figcaption {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    /* margin: 0; */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    width: 8rem;
+    height: 8rem;
+}
+
+header h1 {
+
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+section {
+    padding-top: 1px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+section h2, header h2 {
+    font-size:1.5rem;
+    line-height:1.4;
+    margin: 1rem 0;
+}
+
+section h3 {
+    font-size:1.3rem;
+    line-height: 1;
+    margin: 0.8rem 0;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section div {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 .5rem;
+    gap: 20px;
+}
+
+section div figure {
+    flex-shrink: 0;
+}
+
+section ul li {
+    margin: 0 0 1.25rem;
+}
+
+small {
+    color: #999;
+}
+
+main article h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+
+
+
+
+
