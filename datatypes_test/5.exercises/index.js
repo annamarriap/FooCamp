@@ -121,7 +121,7 @@ function loopsTest() {
   dataTypesLabel.innerHTML = `${passTests}/6 passed`;
 }
 
-dataTypesTest();
+// dataTypesTest();
 
 
 function main() {
