@@ -1,0 +1,79 @@
+body {
+    background-color:#9680C8;
+    color:#00033E;
+}
+.main-container-trabajo {
+    position: relative;
+}
+.container {
+    position: sticky;
+    top:0;
+    background:#c4b3ec ;
+    padding: 1rem 2rem 5rem 2rem;
+}
+@media only screen and (min-width: 501px) {
+    .container {
+        max-width: 30%;
+        margin: auto;
+    }
+}
+.container .img-container {
+    position: relative;
+}
+.container .leyenda h3 {
+    margin: 0;
+}
+.container .leyenda {
+    position:absolute;
+    background-color: #00033E;
+    opacity: 0.8;
+    padding: 0.5em;
+    color: #fff;
+    box-sizing: border-box;
+}
+.container.articulo-1 .leyenda,
+.container.articulo-2 .leyenda {
+    top:50%;
+}
+.container.articulo-3 .leyenda {
+    top:0%;
+    right: 0;
+}
+.container.articulo-5 .leyenda {
+    bottom: 0.2em;
+    width: 100%;
+}
+.container.articulo-6 .leyenda {
+    top:0%;
+}
+.container img {
+    width: 100%;
+    border:0.5em solid white;
+    box-sizing: border-box;
+}
+.container p:last-child {
+    margin-bottom: 3rem;
+}
+.social,
+.container {
+    -webkit-box-shadow: 0px 6px 22px 6px rgb(125 125 125);
+    -moz-box-shadow: 0px 6px 22px 6px rgb(125 125 125);
+    box-shadow: 0px 6px 22px 6px rgb(125 125 125);
+}
+.social {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social a {
+    box-sizing: border-box;
+    padding: 0 0.5em;
+}
+.social a img {
+    max-width: 2em;
+}
