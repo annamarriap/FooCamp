@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+$colors:orange, yellow, green, blue, purple;
+
+@keyframes shotup {
+    0% {
+      transform: translateY(500%) ;
+      opacity: 0;
+    }
+    70% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%) ;
+      opacity: 1;
+    }
+  }
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #fdedff;
+    color: #251134;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+    &__menu {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    animation: shotup 600ms ease-in;
+    animation-delay: 100ms;
+
+        &--button{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            background-color: transparent;
+            padding: 2rem;
+            height: 1rem;
+            border-radius: 3rem;
+            transition: all 600ms linear;
+
+            &:hover {
+                background-color: rgba(237, 171, 226, 0.9);
+                height: 24rem;
+                transition: all 600ms linear;
+            }
+
+            .navigation__menu--icon {
+                width: 4rem;
+                height: 4rem;
+                top: 1rem;
+                position:absolute;
+                cursor: pointer;
+                z-index: 2; /* and place it over the hamburger */
+                margin: 0;
+                border-radius: 100%;
+                background: rgb(255, 0, 119);
+                display: flex;
+                justify-content: center;
+
+                    &:after,
+                    &:before {
+                            content: '';
+                            position: absolute;
+                            width: 0.3rem;
+                            height: 2rem;
+                            background-color: #251134;
+                            transition: all 400ms ease-in-out;
+                            z-index: 3;
+                            top: 1rem;
+                    }
+                    &:before{
+                            transform: rotateZ(180deg);
+        
+                    }
+                    &:after{
+                        transform: rotateZ(90deg);
+                    }
+            }
+    
+            ul.menu {
+                padding: 0rem 1rem 1rem 1rem;
+                border-radius: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                margin: 0;
+                top: -1rem;
+            
+                li {
+                    list-style: none;
+                    width: 4rem;
+                    height: 4rem;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.5rem;
+                    border-radius: 100%;
+                    padding: 2rem;
+                    line-height: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    box-sizing: border-box;
+                    opacity: 0;
+    
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    //Diferent tone at menu items
+                    @for $i from 1 through 5 {
+                        &:nth-of-type(#{$i}) {
+                          transition: all 600ms linear;
+                          background-color: darken(rgb(255, 0, 119), $i * 5);
+                          transform: translateY(-15px);
+                         }
+                    }
+                }
+
+            }
+
+             &:hover {
+                .navigation__menu--icon {
+                    &:before,
+                    &:after {
+                        transition:all 0.4s ease-in-out;
+                        rotate: 1.75turn;
+                    }
+                    &:before{
+                        transform: rotateZ(135deg);
+                    }
+                    &:after{
+                        transform: rotateZ(224deg);
+                    }
+                }
+
+                ul.menu {
+                    li {
+                        cursor: pointer;
+                        opacity: 1;
+                        transition: all 0.2s linear;
+
+                        //Iterate color from var colors to menu items
+                        @for $i from 1 through length($colors) {
+                            &:nth-child(#{length($colors)}n+#{$i}) {
+                                background-color: nth($colors, $i); 
+                            }
+                        }
+
+                        //Define different posotions to menu items
+                        @for $i from 1 through 5 {
+                            &:nth-of-type(#{$i}) {
+                                transition: all 600ms linear;
+                                transform: translateY(70px * $i);
+                             }
+                        }
+                        &:hover{
+                            filter: brightness(75%);
+                            transition: all 0.2s linear;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -1;
+    h1 {
+      font-size: 70px;
+       animation: shotup 600ms ease-in-out;
+       animation-delay: 300ms;
+    }
+    p {
+        animation: shotup 600ms ease-in;
+        animation-delay: 500ms;
+    }
+}
